@@ -4,21 +4,20 @@
 	"type": "module",
 	"scripts": {
 		"build:sass": "sass --watch --style=compressed --sourcemap=none assets/styles/:public/styles/",
-		"build": "concurrently \"nuxt build\" \"sass --watch --style=compressed -q --no-source-map assets/styles/:public/styles/\"",
+		"build": "sass --style=compressed assets/styles/:public/styles/ && nuxt build",
 		"devo": "nuxt dev",
 		"dev": "concurrently \"nuxt dev\" \"sass --watch --style=compressed -q --no-source-map assets/styles/:public/styles/\"",
-
 		"generate": "nuxt generate",
 		"preview": "nuxt preview",
 		"postinstall": "nuxt prepare"
 	},
 	"dependencies": {
 		"nuxt": "^3.16.2",
+		"sass": "^1.87.0",
 		"vue": "^3.5.13",
 		"vue-router": "^4.5.0"
 	},
 	"devDependencies": {
-		"concurrently": "^9.1.2",
-		"sass": "^1.87.0"
+		"concurrently": "^9.1.2"
 	}
 }
