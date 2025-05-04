@@ -4,7 +4,7 @@
 	"type": "module",
 	"scripts": {
 		"build:sass": "sass --watch --style=compressed --sourcemap=none assets/styles/:public/styles/",
-		"build": "nuxt build",
+		"build": "concurrently \"nuxt build\" \"sass --watch --style=compressed -q --no-source-map assets/styles/:public/styles/\"",
 		"devo": "nuxt dev",
 		"dev": "concurrently \"nuxt dev\" \"sass --watch --style=compressed -q --no-source-map assets/styles/:public/styles/\"",
 
