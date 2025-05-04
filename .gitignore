@@ -25,5 +25,4 @@ logs
 bun.lock
 
 # Other Files
-assets/*
-public/styles/*
+public/styles/*.css

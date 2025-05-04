@@ -1,0 +1,102 @@
+@import './../_variables.sass'
+
+* 
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+
+.main-default-layout-content
+    min-height: 80dvh
+
+header 
+    background: linear-gradient(135deg, $base-color-ligth-1, $base-color-ligth-2)
+    color: white
+    padding: 20px 50px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+
+
+.logo
+    font-size: 1.8rem
+    font-weight: bold
+    letter-spacing: 1px
+
+
+nav ul 
+    list-style: none
+    display: flex
+    gap: 30px
+
+nav ul li 
+    transition: transform 0.3s ease
+
+nav ul li:hover 
+    transform: scale(1.1)
+
+nav ul li a
+    text-decoration: none
+    color: white
+    font-size: 1rem
+    transition: color 0.3s
+
+
+nav ul li a:hover
+    color: #ffcc00
+
+@media (max-width: 768px)
+    header
+        flex-direction: column
+        text-align: center
+
+    nav ul
+        flex-direction: column
+        margin-top: 15px
+        gap: 15px
+
+footer
+    background: linear-gradient(135deg, #1e3c72, #2a5298)
+    color: white
+    padding: 30px 50px
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2)
+
+
+.footer-container
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 20px
+
+.footer-logo
+    font-size: 1.5rem
+    font-weight: bold
+    letter-spacing: 1px
+
+.footer-links
+    display: flex
+    gap: 30px
+
+.footer-links a
+    color: white
+    text-decoration: none
+    font-size: 0.95rem
+    transition: color 0.3s
+
+.footer-links a:hover
+    color: #ffcc00
+
+.footer-copy
+    font-size: 0.8rem
+    opacity: 0.7
+
+@media (max-width: 768px)
+    .footer-links
+        flex-direction: column
+        gap: 15px
+        text-align: center
+    
