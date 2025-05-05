@@ -3,7 +3,6 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"build:sass": "sass --watch --style=compressed --sourcemap=none assets/styles/:public/styles/",
 		"build": "sass --style=compressed assets/styles/:public/styles/ && nuxt build",
 		"devo": "nuxt dev",
 		"dev": "concurrently \"nuxt dev\" \"sass --watch --style=compressed -q --no-source-map assets/styles/:public/styles/\"",

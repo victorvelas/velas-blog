@@ -1,4 +1,5 @@
 @import './../_variables.sass'
+@import './_defaultVars.sass'
 
 * 
     margin: 0
@@ -12,51 +13,52 @@ body
     min-height: 80dvh
 
 header 
-    background: linear-gradient(135deg, $base-color-ligth-1, $base-color-ligth-2)
-    color: white
-    padding: 20px 50px
-    display: flex
-    justify-content: space-between
-    align-items: center
+    color: #333
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+    div
+        margin: auto
+        display: flex
+        justify-content: space-between
+        align-items: stretch
+        max-width: $contentWidth
+        section
+            min-height: 45px
+            border: solid 1px red !important
+            display: flex
+            align-items: center
+        nav
+            min-height: 100%
+            ul
+                list-style: none
+                display: flex
+                min-height: 100% !important
+                gap: 5px
+                align-items: stretch
+                li
+                    display: flex
+                    align-items: stretch
+                    a.app-link
+                        align-content: center
+                        color: #333
+                        text-decoration: none
+                        min-height: 100% !important
+                        padding: 0px 10px
+                        transition: all 0.3s ease-in-out
+                        &:hover
+                            color: $primary-color
+                    a.app-link.router-link-exact-active
+                        border-bottom: solid 1px $primary-color
+                        color: $primary-color
 
-
-.logo
-    font-size: 1.8rem
-    font-weight: bold
-    letter-spacing: 1px
-
-
-nav ul 
-    list-style: none
-    display: flex
-    gap: 30px
-
-nav ul li 
-    transition: transform 0.3s ease
-
-nav ul li:hover 
-    transform: scale(1.1)
-
-nav ul li a
-    text-decoration: none
-    color: white
-    font-size: 1rem
-    transition: color 0.3s
-
-
-nav ul li a:hover
-    color: #ffcc00
 
 @media (max-width: 768px)
     header
         flex-direction: column
         text-align: center
-
-    nav ul
-        flex-direction: column
-        margin-top: 15px
-        gap: 15px
+        nav ul
+            flex-direction: column
+            margin-top: 15px
+            gap: 15px
 
 footer
     background: linear-gradient(135deg, #1e3c72, #2a5298)
@@ -64,6 +66,9 @@ footer
     padding: 30px 50px
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2)
+    .footer-copy
+        font-size: 0.8rem
+        opacity: 0.7
 
 
 .footer-container
@@ -80,23 +85,19 @@ footer
 .footer-links
     display: flex
     gap: 30px
+    a
+        color: white
+        text-decoration: none
+        font-size: 0.95rem
+        transition: color 0.3s
+        &:hover
+            color: #ffcc00
 
-.footer-links a
-    color: white
-    text-decoration: none
-    font-size: 0.95rem
-    transition: color 0.3s
 
-.footer-links a:hover
-    color: #ffcc00
-
-.footer-copy
-    font-size: 0.8rem
-    opacity: 0.7
 
 @media (max-width: 768px)
     .footer-links
         flex-direction: column
         gap: 15px
         text-align: center
-    
+   
